@@ -1,0 +1,6 @@
+User-agent: *
+# Sitemap: https://adminswerk.de/sitemap.xml
+
+# Only allow the /assets/img folder
+Disallow: /assets/
+Allow: /assets/img/
