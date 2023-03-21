@@ -12,22 +12,25 @@ Vous avez besoin de configurer à la fois le module Obsidian et mkdocs afin que 
 
 Vous pouvez obtenir plus d'information au sujet de la création de site via Material Mkdocs [ici](https://squidfunk.github.io/mkdocs-material/creating-your-site/#advanced-configuration).
 
-Au sein de votre template nouvellement clonée, vous trouverez un `mkdocs.yml`. Ce fichier vous permet de personnaliser votre blog ! 
+Au sein de votre template nouvellement clonée, vous trouverez un `mkdocs.yml`. Ce fichier vous permet de personnaliser votre blog !
 
 Les plus importants à éditer :
-1. `site_name` 
+
+1. `site_name`
 2. `site_description`
 3. `site_url` (critique) : Par défaut, c'est `https://github_username.io/repo_name` [^1]
 
 Pour modifier le logo et le favicon, mettez d'abord le fichier choisi dans `assets/logo`, et changez `logo` et `favicon` :
+
 1. `logo : assets/meta/logo_name.png`
 2. `favicon : assets/meta/favicon.png`.
 3. `extra` : `SEO : 'assets/meta/LOGO_SEO.png'` afin de faire fonctionner proprement les SEO.
 
 Vous pouvez personnaliser :
+
 - Police
-- Schéma de couleurs, palette, icônes 
-- Langue  
+- Schéma de couleurs, palette, icônes
+- Langue
 
 [Consultez la documentation pour obtenir plus d'informations](https://squidfunk.github.io/mkdocs-material/setup/changing-the-colors/)
 
@@ -39,19 +42,20 @@ La dernière partie du fichier mkdocs est une configuration pour les `hooks` et 
 
 #### Liste des articles
 
-La liste des articles est configuré par la clé `blog_list` et peut prendre les paramètres suivants : 
+La liste des articles est configuré par la clé `blog_list` et peut prendre les paramètres suivants :
 
-- `pagination` (*`boolean, defaut: True`*) : Affiche une pagination si la liste est trop longue.
-- `pagination_message` (*`boolean, defaut: True`*) : Affiche un message indiquant le nombre de postes (fichier) dans le dossier.
-- `pagination_translation` (*`string, defaut: 'posts in'`*) : Traduction du message de pagination.
+- `pagination` (_`boolean, defaut: True`_) : Affiche une pagination si la liste est trop longue.
+- `pagination_message` (_`boolean, defaut: True`_) : Affiche un message indiquant le nombre de postes (fichier) dans le dossier.
+- `pagination_translation` (_`string, defaut: 'posts in'`_) : Traduction du message de pagination.
 
-Configuration par défaut : 
+Configuration par défaut :
+
 ```yml
 extra:
-    blog_list:
-        pagination: true
-        pagination_message: true
-        pagination_translation: 'posts in'
+  blog_list:
+    pagination: true
+    pagination_message: true
+    pagination_translation: "posts in"
 ```
 
 #### Hooks
@@ -59,10 +63,12 @@ extra:
 Cette partie contient la configuration des `hooks`, des programmes courts en python qui permettent de patch certaines parties de Obsidian incompatibles avec Mkdocs.
 
 Vous pouvez y configurer :
+
 - La suppression des commentaires Obsidian (`%% comments %%`) : `strip_comments: true`
 - Un fix pour les titres, qui rajoute un `#` à tous les titres (sauf le 6e) car le TOC de Mkdocs considère que le H1 est le titre principal/titre du fichier : `fix_heading : true`
 
-Configuration par défaut : 
+Configuration par défaut :
+
 ```yml
 extra:
   hooks:
@@ -70,17 +76,21 @@ extra:
     fix_heading: false
 ```
 
-## Test local (*optionnel*)
+## Test local (_optionnel_)
 
 Pour faire fonctionner le blog en local, vous devez installer les pré-requis et lancer `mkdocs serve`.
+
 ```
 cd publish_blog
 pip install -r requirements.txt
 mkdocs serve
 ```
+
 Un petit conseil : Vous pouvez utiliser un environnement [conda](https://docs.conda.io/en/latest/) ici (ou un venv, mais je n'aime pas venv). Utilisez simplement ceci :
 ``bash
 conda create -n Publisher python=3.10.4
 conda activate Publisher
+
 ```
 Juste avant l'installation du `pip` !
+```

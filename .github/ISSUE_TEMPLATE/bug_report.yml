@@ -11,7 +11,7 @@ body:
       value: |
         Thanks for taking the time to fill out this bug report.
   - type: checkboxes
-    attributes: 
+    attributes:
       label: Issue validation
       description: "Thanks to check if your issue is relative to the repository. Any non relative or duplicate issue will be closed."
       options:
@@ -40,12 +40,12 @@ body:
         1. Go to '...'
         2. Click on '....'
         3. Scroll down to '....'
-        4. See error 
+        4. See error
   - type: textarea
     attributes:
       label: Configuration
       description: |
-        If you think your bug is related to a plugin configuration, please, send me your `mkdocs.yml`. 
+        If you think your bug is related to a plugin configuration, please, send me your `mkdocs.yml`.
         The content will be automatically formatted into yaml, so no need for backticks.
       render: yaml
   - type: textarea

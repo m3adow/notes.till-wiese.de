@@ -6,7 +6,7 @@ assignees:
   - Mara-Li
 body:
   - type: checkboxes
-    attributes: 
+    attributes:
       label: Issue validator
       description: "Thanks to check if your issue is relative to the repository. Any non relative or duplicate issue will closed."
       options:
@@ -22,7 +22,7 @@ body:
     id: describe-request
     attributes:
       label: Is your feature related to a problem ?
-      description: If you found a solution with the inherent limit I had with Obsidian, please, add it here! 
+      description: If you found a solution with the inherent limit I had with Obsidian, please, add it here!
       placeholder: "Tell me the original problem"
   - type: textarea
     id: describe-solution

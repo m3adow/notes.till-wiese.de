@@ -2,6 +2,6 @@
 DONT FORGET TO EDIT THE URL
 .md-header,
 .md-nav--primary .md-nav__title[for="__drawer"] {
- background: var(--md-primary-fg-color) url(background_image_link_here&auto=format&fit=crop&w=1074&q=80) left center/cover no-repeat;
+    background: var(--md-primary-fg-color) url(background_image_link_here&auto=format&fit=crop&w=1074&q=80) left center/cover no-repeat;
 }
 */
