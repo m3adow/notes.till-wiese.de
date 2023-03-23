@@ -8,7 +8,7 @@ share: true
 kubectl get event --namespace abc-namespace --field-selector involvedObject.name=my-pod-zl6m6
 ```
 
-(source: https://stackoverflow.com/questions/51931113/kubectl-get-events-only-for-a-pod)
+(source: <https://stackoverflow.com/questions/51931113/kubectl-get-events-only-for-a-pod)>
 
 ---
 
@@ -47,14 +47,14 @@ This obviously needs the sealed secrets private key(s).
 ```bash
   kubectl get secret -n kube-system -l sealedsecrets.bitnami.com/sealed-secrets-key -o yaml >main.key
   kubectl get secret -n kube-system sealed-secrets-key -o yaml >> main.key
-```
+  ```
 
-3. Extract the private keys list into a single file: `kubectl get secret -n kube-system -l sealedsecrets.bitnami.com/sealed-secrets-key -o yaml >master.key`
-4. Unseal the sealed secret with kubeseal: `kubeseal --recovery-unseal --recovery-private-key master.key <mysecret.yaml`
+1. Extract the private keys list into a single file: `kubectl get secret -n kube-system -l sealedsecrets.bitnami.com/sealed-secrets-key -o yaml >master.key`  
+2. Unseal the sealed secret with kubeseal: `kubeseal --recovery-unseal --recovery-private-key master.key <mysecret.yaml`
 
 ## List processes without `ps`
 
-_(Also see: https://stackoverflow.com/q/32913424)_
+*(Also see: <https://stackoverflow.com/q/32913424)*>
 
 ```bash
 for prc in /proc/*/cmdline; { (printf "$prc "; cat -A "$prc") | sed 's/\^@/ /g;s|/proc/||;s|/cmdline||'; echo; }
@@ -62,7 +62,7 @@ for prc in /proc/*/cmdline; { (printf "$prc "; cat -A "$prc") | sed 's/\^@/ /g;s
 
 ## Find OOMKilled Pods in Prometheus
 
-_(requires kube_state_metrics)_
+*(requires kube_state_metrics)*
 
 ```promql
 kube_pod_container_status_last_terminated_reason{reason="OOMKilled"}
@@ -70,7 +70,7 @@ kube_pod_container_status_last_terminated_reason{reason="OOMKilled"}
 
 Note: Having no metrics here doesn't necessarily mean there weren't OOMKills.
 
-# Keep Namespace in "Terminating" phase
+## Keep Namespace in "Terminating" phase
 
 Create a job which has a long `terminationGracePeriodSeconds` in the namespace
 
