@@ -173,7 +173,7 @@
                 id="pagination-bottom"
             >
                 <!-- <a href="#">&laquo;</a> -->
-                
+
                 {% for pg_group in blog_pages|slice(page_num) %}
                 <a
                     class="page-number {% if loop.index==1 %}active{% endif%}"
@@ -218,7 +218,7 @@
             }
 
             // show page 1 as default
-            
+
             window.location.hash = "#page1";
 
             // listen to hash change

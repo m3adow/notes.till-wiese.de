@@ -1,3 +1,4 @@
+---
 name: Building Mkdocs Page
 
 on:
@@ -6,20 +7,20 @@ on:
     branches:
       - main
     paths:
-      - 'README.md'
-      - 'overrides/**'
-      - 'docs/**'
-      - 'mkdocs.yml'
-      - 'requirements.txt'
+      - "README.md"
+      - "overrides/**"
+      - "docs/**"
+      - "mkdocs.yml"
+      - "requirements.txt"
 concurrency:
   group: "pages"
   cancel-in-progress: true
-  
+
 permissions:
   contents: read
   pages: write
   id-token: write
-  
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -30,8 +31,8 @@ jobs:
       - id: setup_python
         uses: actions/setup-python@v4
         with:
-          python-version: '3.11'
-          cache: 'pip'
+          python-version: "3.11"
+          cache: "pip"
       - id: python_cache
         name: Check python cache
         uses: actions/cache@v3

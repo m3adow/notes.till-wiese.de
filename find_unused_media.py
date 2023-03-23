@@ -1,5 +1,5 @@
 from pathlib import Path
-import os 
+import os
 import argparse
 
 def find_unused_media(img_path: Path, dry_run: bool = False):
