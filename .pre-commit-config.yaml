@@ -27,4 +27,6 @@ repos:
     rev: v2.7.1
     hooks:
       - id: prettier
-        exclude: '\.html$'
+        exclude_types:
+          - "html" # Fucks up formatting of Jekyll formatted html files
+          - "markdown" # Prettifying is done via Obsidian Linter
