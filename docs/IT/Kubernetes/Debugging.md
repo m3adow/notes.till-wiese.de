@@ -77,3 +77,18 @@ Create a job which has a long `terminationGracePeriodSeconds` in the namespace
 ```bash
 kc create ns till-termination-test; kc create job prevent-termination -n till-termination-test --image=alpine --dry-run=client -o json -- sleep infinity | jq '.spec.template.spec.terminationGracePeriodSeconds = 999' | kc apply --dry-run=server -f-
 ```
+
+## Get logs out of CrashLooping Pod
+
+Regularly happens with NPM errors:
+
+```log
+npm ERR! A complete log of this run can be found in:
+npm ERR!     /root/.npm/_logs/2023-03-29T05_41_43_803Z-debug-0.log
+```
+
+I couldn't find a reliable way to do this for GKE. Best way I found for now is to poll until the pod is back up:
+
+```bash
+while true; do kc exec -ti -c npm npm-example-pod -- bash -c "cat /root/.npm/_logs/*-debug*.log 2>/dev/null" 2>/dev/null; sleep 1; done
+```
