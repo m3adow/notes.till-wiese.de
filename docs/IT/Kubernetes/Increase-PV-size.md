@@ -20,6 +20,17 @@ If you want to monitor what's happening, run two more shell windows with these c
 *   `kubectl get pod -w`
 *   `kubectl get pvc -w`
 
+## Prometheus
+
+For the Prometheus CDR (`prometheuses.monitoring.coreos.com`), it's slightly different.
+
+1. Increase `spec.storage.volumeClaimTemplate.spec.resources.requests.storage` to the desired size
+2. Manually increase PVC size <-- This may be automated and I was just too impatient
+3. ???
+4. Profit
+
+The Prometheus Operator does all the other stuff like recreating the StatefulSet and restarting the Pods by itself.
+
 ## Other
 
 <https://kubernetes.io/blog/2018/07/12/resizing-persistent-volumes-using-kubernetes/>
