@@ -25,7 +25,7 @@ If you want to monitor what's happening, run two more shell windows with these c
 For the Prometheus CDR (`prometheuses.monitoring.coreos.com`), it's slightly different.
 
 1. Increase `spec.storage.volumeClaimTemplate.spec.resources.requests.storage` to the desired size
-2. Manually increase PVC size <-- This may be automated and I was just too impatient
+2. Manually increase PVC size
 3. ???
 4. Profit
 
