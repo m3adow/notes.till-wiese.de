@@ -68,7 +68,7 @@ for prc in /proc/*/cmdline; { (printf "$prc "; cat -A "$prc") | sed 's/\^@/ /g;s
 kube_pod_container_status_last_terminated_reason{reason="OOMKilled"}
 ```
 
-Note: Having no metrics here doesn't necessarily mean there weren't OOMKills.
+Note: Having no metrics here doesn't necessarily mean there weren't OOMKills, as this is only showing the **last** reason for termination.
 
 ## Keep Namespace in "Terminating" phase
 
