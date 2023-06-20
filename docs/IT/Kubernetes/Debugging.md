@@ -15,7 +15,7 @@ kubectl get event --namespace abc-namespace --field-selector involvedObject.name
 ## Debug with ephemeral container
 
 ```bash
-kc debug -it pod-to-debug --image=busybox --target=container-in-pod
+kubectl debug -it pod-to-debug --image=busybox --target=container-in-pod
 ```
 
 ---
