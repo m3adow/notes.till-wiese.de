@@ -3,12 +3,14 @@ share: true
 ---
 
 Personal best practice:
+
 * Always set memory request
 * Always set memory limit to same amount as memory request
 * Always set CPU request
 * Don't set CPU limits
 
 ## Why memory limit = memory request?
+
 * [Memory can't be reclaimed as easily as CPU shares](https://home.robusta.dev/blog/kubernetes-memory-limit)
 * Pods will be scheduled by requests, limits are not taken into account
 * Thusly, having a couple of pods with memory limit > memory request on one node may starve some of them
