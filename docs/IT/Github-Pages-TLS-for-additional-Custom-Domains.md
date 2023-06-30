@@ -2,9 +2,9 @@
 share: true
 ---
 
-1. Set a CNAME to your `github.io` address, `m3adow.github.io` in my case: `notes.till-wiese.de.	3600	CNAME	m3adow.github.io.`
+1. Set a CNAME to your `github.io` address, `m3adow.github.io` in my case: `notes.till-wiese.de.    3600    CNAME    m3adow.github.io.`
 2. Set a CAA record for Let's Encrypt `CAA 0 issue letsencrypt.org m3adow.github.io IN 3600`
-3. *(Potentially not required)* Set a CNAME for `www.yoursubdomain.yourdomain.com`: `www.notes.till-wiese.de.	3600	CNAME	m3adow.github.io.`
+3. *(Potentially not required)* Set a CNAME for `www.yoursubdomain.yourdomain.com`: `www.notes.till-wiese.de.    3600    CNAME    m3adow.github.io.`
 
 ---
 
