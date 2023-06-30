@@ -10,7 +10,7 @@ A GCS bucket to store the dump is required.
 
     ```bash
     gcloud projects add-iam-policy-binding ${GCP_PROJECT_NAME} --member=${CLOUDSQL_DB_SERVICE_ACCOUNT}$ --role=roles/storage.objectAdmin
-    ```   
+    ```
 
 2. Export the DB:
 
