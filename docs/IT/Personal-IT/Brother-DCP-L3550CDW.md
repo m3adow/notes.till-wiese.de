@@ -7,14 +7,14 @@ share: true
 Often times there's still toner in the cartridge, but the printer seemingly just counts the prints.
 
 1. Open the printer so the "Cover is Open" screen is shown
-   
+
 
 ![[PXL_20231004_182204209.MP.jpg|600]]
 
 1. **In this screen** simultaneously press the **Back** ↩️ and the **Abort** ❌ button
 2. Immediately afterwards, press the **Back** ↩️ button
 3. Now you have a menu for all toner colors in **Standard** (STD) and **High capacity** (HC)
-   
+
 
 ![[PXL_20231004_182231927.MP.jpg|600]]
 
