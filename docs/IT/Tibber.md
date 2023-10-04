@@ -2,7 +2,7 @@
 share: true
 ---
 
-*Intended for the german version of the [Tibber Pulse IR](https://tibber.com/de/store/produkt/pulse-ir). I had to return it, as the support wouldn't react to my questions. Will retry in a couple of months when the onslaught of new customers has slowed down.*
+*Intended for the German version of the [Tibber Pulse IR](https://tibber.com/de/store/produkt/pulse-ir). I had to return it, as the support wouldn't react to my questions. Will retry in a couple of months when the onslaught of new customers has slowed down.*
 
 ## Pulse Reset
 

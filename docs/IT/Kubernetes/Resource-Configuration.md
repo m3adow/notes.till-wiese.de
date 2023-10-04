@@ -22,3 +22,7 @@ Exception: Shortly lived pods like Cronjob Pods have their memory reclaimed afte
 
 * [Rarely (if ever) useful, as additionally claimed CPU shares can easily be reclaimed](https://home.robusta.dev/blog/stop-using-cpu-limits)
 * [The myth, that Kubernetes system processes are starved without is wrong](https://blog.netdata.cloud/kubernetes-throttling-doesnt-have-to-suck-let-us-help/#cluster-stability)
+
+## Further reads
+
+[Kubernetes OOM and CPU Throttling](https://sysdig.com/blog/troubleshoot-kubernetes-oom/) by Sysdig
