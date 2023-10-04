@@ -9,7 +9,6 @@ share: true
 * Normally, an unpaged cache will be either be `MISS`ed or `PASS`ed, the next request should `HIT`
 *  If Varnish is clustered, the request may be `PASS`ed to the responsible instance, so control all instances
 
-
 ## Useful Prometheus queries
 
 *Probably only applicable for Varnish Plus*
