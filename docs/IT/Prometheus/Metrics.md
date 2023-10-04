@@ -10,3 +10,4 @@ To check all available Metrics with a specific label use th PromQL Query `{__nam
 ```promql
 {__name__=~".+", namespace="critical-prod-deployment"}
 ```
+
