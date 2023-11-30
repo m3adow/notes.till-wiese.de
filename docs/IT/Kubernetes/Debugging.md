@@ -92,3 +92,11 @@ I couldn't find a reliable way to do this for GKE. Best way I found for now is t
 ```bash
 while true; do kc exec -ti -c npm npm-example-pod -- bash -c "cat /root/.npm/_logs/*-debug*.log 2>/dev/null" 2>/dev/null; sleep 1; done
 ```
+
+## Get VPA recommendations in Mi
+
+_[source](https://github.com/FairwindsOps/goldilocks/issues/522#issuecomment-1566139626) _
+
+```bash
+kubectl get vpa -o json -n mynamespace goldilocks-my-vpa | jq -r '.metadata.name, (.status.recommendation.containerRecommendations[] | ["", .containerName, .target.cpu, (.target.memory | tonumber / 1048576 | round | tostring) + "Mi"] | @tsv)'
+```
