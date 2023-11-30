@@ -21,6 +21,7 @@ Stuff I need to backup when doing dangerous stuff on my phone like updates, new 
 ## Fairphone 4 Update & Root
 
 To update a rooted Fairphone:
+
 *Hint: Only restore after the procedure, the device will be wiped again, if you relock the bootloader.*
 
 1. Make your backups, your device will probably be wiped
