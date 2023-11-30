@@ -94,6 +94,7 @@ while true; do kc exec -ti -c npm npm-example-pod -- bash -c "cat /root/.npm/_lo
 ```
 
 ## Get VPA recommendations in Mi
+
 _[source](https://github.com/FairwindsOps/goldilocks/issues/522#issuecomment-1566139626) _
 
 ```bash
