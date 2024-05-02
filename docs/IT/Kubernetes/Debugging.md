@@ -8,7 +8,7 @@ share: true
 kubectl get event --namespace abc-namespace --field-selector involvedObject.name=my-pod-zl6m6
 ```
 
-(source: <https://stackoverflow.com/questions/51931113/kubectl-get-events-only-for-a-pod)>
+(source: <<https://stackoverflow.com/questions/51931113/kubectl-get-events-only-for-a-pod>)>
 
 ---
 
@@ -25,8 +25,10 @@ kubectl debug -it pod-to-debug --image=busybox --target=container-in-pod
 From the whole cluster:
 
 ```bash
-while read NAMESPACE POD; do kc delete po -n "$NAMESPACE" "$POD"; done <<< $(kubectl get po -A --no-headers | grep -vE "Running|Completed" | grep -P '\dd\d+h$'| awk '{print $1, $2}')
+while read NAMESPACE POD; do kc delete po --wait=false -n "$NAMESPACE" "$POD"; done <<< $(kubectl get po -A --no-headers | grep -vE "Running|Completed|PodInitializing" | grep -P '\dd\d+h$'| awk '{print $1, $2}')
 ```
+
+**Warning:** This command also deletes Pods in initializing state and doesn't wait for finalizers (`--wait=false`), so not every Pod will be deleted at once or at all.
 
 ---
 
@@ -54,7 +56,7 @@ This obviously needs the sealed secrets private key(s).
 
 ## List processes without `ps`
 
-*(Also see: <https://stackoverflow.com/q/32913424)*>
+*(Also see: <<https://stackoverflow.com/q/32913424>)*>
 
 ```bash
 for prc in /proc/*/cmdline; { (printf "$prc "; cat -A "$prc") | sed 's/\^@/ /g;s|/proc/||;s|/cmdline||'; echo; }
@@ -93,6 +95,12 @@ I couldn't find a reliable way to do this for GKE. Best way I found for now is t
 while true; do kc exec -ti -c npm npm-example-pod -- bash -c "cat /root/.npm/_logs/*-debug*.log 2>/dev/null" 2>/dev/null; sleep 1; done
 ```
 
+## Get ALL resources in a namespace
+
+```bash
+kubectl api-resources --verbs=list --namespaced -o name | xargs -n 1 kubectl get --show-kind --ignore-not-found -n ${MYNAMESPACE}
+```
+
 ## Get VPA recommendations in Mi
 
 _[source](https://github.com/FairwindsOps/goldilocks/issues/522#issuecomment-1566139626) _
@@ -100,3 +108,7 @@ _[source](https://github.com/FairwindsOps/goldilocks/issues/522#issuecomment-156
 ```bash
 kubectl get vpa -o json -n mynamespace goldilocks-my-vpa | jq -r '.metadata.name, (.status.recommendation.containerRecommendations[] | ["", .containerName, .target.cpu, (.target.memory | tonumber / 1048576 | round | tostring) + "Mi"] | @tsv)'
 ```
+
+## Inspect Docker Images
+
+[Dive](https://github.com/wagoodman/dive) is a very useful tool for that.
