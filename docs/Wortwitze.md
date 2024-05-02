@@ -11,6 +11,4 @@ share: true
 * Und wer beschwert sich über die beiden in der Kirche? <details>Eine Frommbeere</details>
 * Was ist orange und läuft den Jakobsweg? <details>Eine Wanderine</details>
 * Was ist krumm, gelb und schießt? <details>Eine Banone</details>
-
-
 * Welche Art Besitz haben Gespenster? <details>Geistiges Eigentum</details>
