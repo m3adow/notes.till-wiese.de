@@ -2,7 +2,6 @@
 share: true
 ---
 
-
 As there's no way to restore single files or folders, you first have to restore your backup to a new Filestore instance and copy the files manually. I'll use `/filestore_restore` as share name and `192.0.2.69` as the instances IPv4 address. Furthermore I'll use the folder `important-folder` as the example restore.
 
 Then, you have to create a PV and a PVC to consume the share:
