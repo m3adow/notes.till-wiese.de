@@ -32,11 +32,11 @@ Here is an example of how a label is first renamed and then a temporary label ta
 metricRelabelings:
 # Copy `instance` label to `instance_address`...
 - sourceLabels: [instance]
-targetLabel: instance_address
+  targetLabel: instance_address
 # ...then copy the node name stored in the tmp label to `instance`...
 - sourceLabels: [tmp_node_name]
-targetLabel: instance
+  targetLabel: instance
 # ...before removing the tmp label
 - regex: ^tmp_node_name$
-action: labeldrop
+  action: labeldrop
 ```
