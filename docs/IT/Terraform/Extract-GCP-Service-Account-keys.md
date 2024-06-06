@@ -4,7 +4,7 @@ share: true
 
 When creating a GCP Service Account key, it may be a bit difficult to get the actual key, as the module does not export outputs. It doesn't support imports to create keys and then import them into the state file afterwards either.
 
-One easy way is to use a  temporary `null_resource`, when applying locally:
+One easy way is to use a temporary `null_resource`, when applying locally:
 
 ```hcl
 resource "google_service_account" "my_service_account" {
