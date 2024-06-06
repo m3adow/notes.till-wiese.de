@@ -8,7 +8,7 @@ Often times there's still toner in the cartridge, but the printer seemingly just
 
 1. Open the printer so the "Cover is Open" screen is shown
 
-![[PXL_20231004_182204209.MP.jpg|600]]
+![[PXL_20231004_182204209.MP.jpg|PXL_20231004_182204209.MP.jpg]]
 
 2. **In this screen** simultaneously press the **Back** ↩️ and the **Abort** ❌ button
 3. Immediately afterwards, press the **Back** ↩️ button
