@@ -7,6 +7,8 @@ share: true
 
   ```bash
 
+
+
 kubeseal --fetch-cert > sealed-secrets-pubkey.pem
 
   ```
@@ -27,6 +29,8 @@ echo -n "SECRETAPIKEY" | kubectl create secret generic ${SEALED_SECRET_NAME} --d
 
   ```yaml
   apiVersion: v1
+
+
 
 stringData:
 
