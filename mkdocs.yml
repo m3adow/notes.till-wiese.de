@@ -102,7 +102,8 @@ plugins:
       htmlmin_opts:
         remove_comments: true
   - search
-  - social
+  # Need to upgrade material fist. Will probably never do this. :P
+  # - social
 
   # - tags:
   #     tags_file: tags.md
