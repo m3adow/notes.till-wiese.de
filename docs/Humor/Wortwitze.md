@@ -14,4 +14,10 @@ share: true
 * Was ist krumm, gelb und schießt? <details>Eine Banone</details>
 * Welche Art Besitz haben Gespenster? <details>Geistiges Eigentum</details>
 * Was nehmen Philosophen mit in die Badewanne? <details>Nietzsche-Entchen</details>
+* Was macht der italienische Nachtwächter im Museum? <details>Der Pasta auf.</details>
 * Wie nennt man einen kleinen Tüsteher? <details>Sicherheitshalber!</details>
+* Mit welchem Verkehrsmittel befördert man unruhige Kinder? <details>Mit dem Zappelin.</details>
+* Was sitzt im Baum hat Federn und grüßt? <details>Ein Huhu.</details>
+* Was ist zäh, braun und fliegt? <details>Eine Ledermaus.</details>
+* Alle Gefangenen wollen ihre Freiheit. Bis auf die Franzosen. <details>Die wollen lieber Tee.</details>
+* Was macht der Elektriker, wenn er nicht weiß, an welcher Stelle sich die Kabel befinden? <details>Er schaut ins Vokabelheft.</details>
