@@ -23,7 +23,7 @@ Stuff I need to backup when doing dangerous stuff on my phone like updates, new 
 To update a rooted Fairphone:
 
 Try this first:
-1. In Magisk press `🗑️ Uninstall Magisk` → `Restore Images`
+1. In Magisk press `🗑️ Uninstall Magisk` → `Restore Images` (no reboot needed)
 2. Install OTA-update and let it perform a full reboot, wait for the update to finish after the reboot
 3. Boot into bootloader with `adb reboot bootloader`
 4. Use any Magisk patched `boot.img` you have lying around and `fastboot boot` from it. It doesn’t matter which `boot.img` you use, you just won’t get usable wifi (and some other problems) with the older ones, but since we only need to install Magisk that doesn’t really matter.
