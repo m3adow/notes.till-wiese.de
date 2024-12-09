@@ -64,7 +64,7 @@ spec:
 Then you can either use `kubectl cp` for easy copying or `kubectl exec` with `tar` to preserve permissions, symlinks, etc. I prefer to use `tar` as that's safest:
 
 ```bash
-kubectl exec filestore-restore -- tar cf - /tmp/restore/important-folder | kubectl exec -n <NAMESPACE>-c <CONTAINER> -i original-pod -- tar xf - -C /original/data/path --strip-components=<amount of preceding path components to be stripped>
+kubectl exec filestore-restore -- tar cf - /tmp/restore/important-folder | kubectl exec -n <NAMESPACE>-c <CONTAINER> -i <ORIGINALPODNAME> -- tar xf - -C /original/data/path --strip-components=<amount of preceding path components to be stripped>
 ```
 
 If everything has been restored as expected, don't forget to delete PV, PVC, Pod and the filestore instance the backup was restored to.
